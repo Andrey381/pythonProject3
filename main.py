@@ -1,11 +1,21 @@
-a, b = 10, 3 # Объявили две переменные
+import turtle as t
 
-print(a, '+', b, '=', a + b) # Оператор сложеения
-print(a, '-', b, '=', a - b) # Оператор вычитания
-print(a, '*', b, '=', a * b) # Оператор умножения
-print(a, '/', b, '=', a / b) # Оператор деления
-print(a, '//', b, '=', a // b) # Оператор деления на цело
-print(a, 'остаток от деления', b, '=', a % b) # Оператор остатка от деления
-print(a, 'в степени ', b, '=', a ** b) # Оператор возведения в степень
-a += 1 # Инкремент (a = a + 2)
-b -= 1 # Декремент (b = b - 1)
+RND = 360  # 360 градусов в замкнутой фигуре
+dist = 120  # дистанция
+figs = 10 # число фигур
+sides = 4  # число сторон
+f_angle = RND / figs  # угол для наклона фигур
+angle = RND / sides # угол для сторон фигуры
+fig_count = 0  # счётчик фигур
+count = 0 # счетчик сторон
+
+while fig_count < figs:
+    count = 0
+    while count < sides:
+        t.forward(dist)
+        t.right(angle)
+        count += 1
+    fig_count += 1
+    t.right(f_angle)
+
+t.mainloop()
