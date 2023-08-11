@@ -19,3 +19,4 @@ while fig_count < figs:
     t.right(f_angle)
 
 t.mainloop()
+#3
